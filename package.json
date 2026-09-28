@@ -1,0 +1,24 @@
+{
+  "name": "competex",
+  "version": "1.0.0",
+  "description": "Feedants Full Stack Development Internship Technical Assignment - Competition Details Screen",
+  "scripts": {
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:frontend": "npm --prefix frontend start",
+    "web:frontend": "npm --prefix frontend run web",
+    "test:concurrency": "npm --prefix backend run test:concurrency",
+    "seed": "npm --prefix backend run seed"
+  },
+  "keywords": [
+    "feedants",
+    "react-native",
+    "nodejs",
+    "express",
+    "mongodb",
+    "competition",
+    "concurrency"
+  ],
+  "author": "Full Stack Development Intern",
+  "license": "ISC"
+}

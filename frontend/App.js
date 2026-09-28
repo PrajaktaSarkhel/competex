@@ -114,6 +114,12 @@ function CompetitionScreen() {
   }, [currentUser]);
 
   useEffect(() => {
+    if (Platform.OS === 'web' && typeof document !== 'undefined') {
+      document.title = 'Competex';
+    }
+  }, []);
+
+  useEffect(() => {
     loadCompetitionData();
 
     // Auto-polling for live spots updates every 5 seconds

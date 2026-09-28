@@ -142,6 +142,7 @@ export const RegistrationModal = ({ visible, onClose, competition, onRegisteredS
                   value={userName}
                   onChangeText={setUserName}
                   placeholder="Your Full Name"
+                  placeholderTextColor={COLORS.textMuted}
                 />
 
                 <Text style={styles.fieldLabel}>Email Address</Text>
@@ -150,6 +151,7 @@ export const RegistrationModal = ({ visible, onClose, competition, onRegisteredS
                   value={userEmail}
                   onChangeText={setUserEmail}
                   placeholder="your.email@example.com"
+                  placeholderTextColor={COLORS.textMuted}
                   keyboardType="email-address"
                   autoCapitalize="none"
                 />
@@ -160,6 +162,7 @@ export const RegistrationModal = ({ visible, onClose, competition, onRegisteredS
                   value={userPhone}
                   onChangeText={setUserPhone}
                   placeholder="+91 98765 43210"
+                  placeholderTextColor={COLORS.textMuted}
                   keyboardType="phone-pad"
                 />
 

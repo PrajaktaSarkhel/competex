@@ -32,10 +32,10 @@ export const SubmissionModal = ({
   onSubmissionSuccess,
 }) => {
   const { currentUser } = useAuthUser();
-  const [title, setTitle] = useState('');
-  const [danceStyle, setDanceStyle] = useState('Kathak');
-  const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/watch?v=sample_classical_dance');
-  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState(existingSubmission?.title || '');
+  const [danceStyle, setDanceStyle] = useState(existingSubmission?.danceStyle || 'Kathak');
+  const [videoUrl, setVideoUrl] = useState(existingSubmission?.videoUrl || '');
+  const [description, setDescription] = useState(existingSubmission?.description || '');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -141,6 +141,7 @@ export const SubmissionModal = ({
                 <TextInput
                   style={styles.input}
                   placeholder="e.g. Kathak Tarana in Teentaal"
+                  placeholderTextColor={COLORS.textMuted}
                   value={title}
                   onChangeText={setTitle}
                 />
@@ -171,7 +172,8 @@ export const SubmissionModal = ({
                 <Text style={styles.label}>Video Link (YouTube / Drive / MP4) *</Text>
                 <TextInput
                   style={styles.input}
-                  placeholder="https://youtu.be/... or Drive link"
+                  placeholder="https://www.youtube.com/watch?v=sample_classical_dance"
+                  placeholderTextColor={COLORS.textMuted}
                   value={videoUrl}
                   onChangeText={setVideoUrl}
                   autoCapitalize="none"
@@ -181,6 +183,7 @@ export const SubmissionModal = ({
                 <TextInput
                   style={[styles.input, styles.textArea]}
                   placeholder="Mention Raag, Taal, Guru lineage, or choreography notes..."
+                  placeholderTextColor={COLORS.textMuted}
                   value={description}
                   onChangeText={setDescription}
                   multiline

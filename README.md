@@ -13,6 +13,14 @@ This repository contains the complete, production-grade implementation of the **
 
 ---
 
+## 📸 Application Preview
+
+<p align="center">
+  <img src="./docs/app_screenshot.png" width="380" alt="Competex - Competition Details Screen" />
+</p>
+
+---
+
 ## 🚀 Quick Start (Zero-Config Setup)
 
 The application has been engineered with an **embedded zero-configuration database fallback** (`mongodb-memory-server`). Reviewers can run the application immediately without installing or configuring external MongoDB instances!
@@ -26,7 +34,7 @@ The application has been engineered with an **embedded zero-configuration databa
 ```bash
 # Clone the repository
 git clone <your-github-repo-url>
-cd Feedants_Full_Stack_Development_Internship_Technical_Assignment
+cd competex
 
 # Install backend dependencies
 cd backend && npm install
